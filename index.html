@@ -6,8 +6,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Cuprum|Ubuntu" rel="stylesheet">
-
+    <link rel="shortcut icon" href="dist/img/favicon.png" type="image/png">
     <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/css/fontello.css">
     <link rel="stylesheet" href="dist/css/main.css">
     <title>Bukovel</title>
 </head>
@@ -23,7 +24,7 @@
             <li>Lorem ipsum dolor sit amet.</li>
             <li>Lorem ipsum dolor sit amet.</li>
         </ul>
-        <a href="#" class="header__pickupTourButton button">Подобрать тур</a>
+        <a href="#orderTourForm" class="header__pickupTourButton button pickupTourButton">Подобрать тур</a>
     </div>
 </header>
 
@@ -34,17 +35,24 @@
         </h1>
         <h1 class="stockSection__smallHeader">
             Оставьте заявку <span>СЕЙЧАС</span> <br>
-            и получите 1 экскурсию на выбор <br>
-            <span>В ПОДАРОК!</span>
+            и получите 5 % на выбранный <span>тур</span>.
         </h1>
         <img src="dist/img/gift.png" alt="" class="stockSection__giftImage">
-        <form action="" class=" stockSection__orderTourForm orderTourForm" style="background-image: url('dist/img/form_bg.jpg');">
+        <form id='orderTourForm' action="" class=" stockSection__orderTourForm orderTourForm" style="background-image: url('dist/img/form_bg.jpg');">
             <h1 class="orderTourForm__mainHeader">ЗАПОЛНИТЕ ФОРМУ</h1>
             <h2 class="orderTourForm__smallHeader">на подбор индивидуального <br>
-                тура в Крым</h2>
+                тура в Буковель</h2>
             <input class="orderTourForm__input inputDefault" type="text" placeholder="Ваше имя*">
             <input class="orderTourForm__input inputDefault" type="text" placeholder="Ваше телефон*">
             <input class="orderTourForm__input inputDefault" type="email" placeholder="Ваше e-mail*">
+            <div class="select  inputDefault orderTourForm__select">
+                <span class="select__placeholder"><h2>Выберите тур</h2></span>
+                <ul>
+                    <li><h2>БУКОВЕЛЬ - 3 ДНЯ</h2></li>
+                    <li><h2>БУДНИ НА БУКОВЕЛИ И ДРАГОБРАТЕ</h2></li>
+                    <li><h2>ВЫХОДНЫЕ НА БУКОВЕЛИ И ДРАГОБРАТЕ</h2></li>
+                </ul>
+            </div>
             <a href="#" class="orderTourForm__pickupTourButton button">Подобрать тур</a>
         </form>
     </div>
@@ -58,38 +66,33 @@
     <div class="buyReasons__items">
         <div class="buyReasons__item buyReasonItem">
             <div class="buyReasonItem__blueBlock">
-                <img src="dist/img/reason1.png" alt="" class="buyReasonItem__icon">
+                <i class="demo-icon buyReasonItem__icon icon-users"></i>
             </div>
-            <p class="buyReasonItem__number">12</p>
-            <h2 class="buyReasonItem__descr">лет в сфере туризма</h2>
+            <h2 class="buyReasonItem__descr">Профессиональная команда менеджеров</h2>
         </div>
         <div class="buyReasons__item buyReasonItem">
             <div class="buyReasonItem__blueBlock">
-                <img src="dist/img/reason2.png" alt="" class="buyReasonItem__icon">
+                <i class="demo-icon buyReasonItem__icon icon-skiing"></i>
             </div>
-            <p class="buyReasonItem__number">2000</p>
-            <h2 class="buyReasonItem__descr">готовых туров</h2>
+            <h2 class="buyReasonItem__descr">Мы сами лыжники</h2>
         </div>
         <div class="buyReasons__item buyReasonItem">
             <div class="buyReasonItem__blueBlock">
-                <img src="dist/img/reason3.png" alt="" class="buyReasonItem__icon">
+                <i class="demo-icon buyReasonItem__icon icon-tag"></i>
             </div>
-            <p class="buyReasonItem__number">20%</p>
-            <h2 class="buyReasonItem__descr">скидка на авиабилеты</h2>
+            <h2 class="buyReasonItem__descr">Скидки на sky-пассы</h2>
         </div>
         <div class="buyReasons__item buyReasonItem">
             <div class="buyReasonItem__blueBlock">
-                <img src="dist/img/reason4.png" alt="" class="buyReasonItem__icon">
+                <i class="demo-icon buyReasonItem__icon icon-thumbs-up"></i>
             </div>
-            <p class="buyReasonItem__number">1200</p>
-            <h2 class="buyReasonItem__descr">довольных клиентов</h2>
+            <h2 class="buyReasonItem__descr">2500 и более довольных клиентов</h2>
         </div>
         <div class="buyReasons__item buyReasonItem">
             <div class="buyReasonItem__blueBlock">
-                <img src="dist/img/reason5.png" alt="" class="buyReasonItem__icon">
+                <i class="demo-icon buyReasonItem__icon icon-bus"></i>
             </div>
-            <p class="buyReasonItem__number">35</p>
-            <h2 class="buyReasonItem__descr">сотрудников в штате</h2>
+            <h2 class="buyReasonItem__descr">Комфортабельный транспорт и проживание</h2>
         </div>
     </div>
 </section>
@@ -102,19 +105,19 @@
             <img src="dist/img/bestTour1.jpg" alt="" class="bestTourItem__image">
             <h1 class="bestTourItem__mainHeader">БУКОВЕЛЬ - 3 ДНЯ</h1>
             <p class="bestTourItem__par">Lorem ipsum dolor sit amet, <br> consectetur adipisicing.</p>
-            <a href="#" class="bestTourItem__pickupTourButton button">Выбрать тур</a>
+            <a href="http://sbmtour.com.ua/tours/bukovel-3-dnya/" class="bestTourItem__pickupTourButton button">Выбрать тур</a>
         </div>
         <div class="bestTours__item bestTourItem">
             <img src="dist/img/bestTour2.jpg" alt="" class="bestTourItem__image">
             <h1 class="bestTourItem__mainHeader">БУДНИ НА БУКОВЕЛИ И ДРАГОБРАТЕ</h1>
             <p class="bestTourItem__par">Lorem ipsum dolor sit amet, <br> consectetur adipisicing.</p>
-            <a href="#" class="bestTourItem__pickupTourButton button">Выбрать тур</a>
+            <a href="http://sbmtour.com.ua/tours/bukovel-i-dragobrat-4-dnya-kataniya/" class="bestTourItem__pickupTourButton button">Выбрать тур</a>
         </div>
         <div class="bestTours__item bestTourItem">
             <img src="dist/img/bestTour3.jpg" alt="" class="bestTourItem__image">
             <h1 class="bestTourItem__mainHeader">ВЫХОДНЫЕ НА БУКОВЕЛИ И ДРАГОБРАТЕ</h1>
             <p class="bestTourItem__par">Lorem ipsum dolor sit amet, <br> consectetur adipisicing.</p>
-            <a href="#" class="bestTourItem__pickupTourButton button">Выбрать тур</a>
+            <a href="http://sbmtour.com.ua/tours/vyhodnye-na-bukoveli-i-dragobrate/" class="bestTourItem__pickupTourButton button">Выбрать тур</a>
         </div>
     </div>
 </section>
@@ -143,6 +146,17 @@
         </div>
     </div>
 </section>
+
+<footer class="footer" style="background-image: url('dist/img/footer_bg.jpg')">
+    <div class="footer__wrap">
+        <img src="dist/img/logo.png" alt="" class="footer__logo">
+        <div class="footer__addressBlock addressBlock">
+            <h1 class="addressBlock__header">Наш адресс</h1>
+            <p class="addressBlock__descr">Киев, ул.Старовокзальная 23, оф.309А.</p>
+        </div>
+        <h1 class="footer__telNumber">+38 (044) 362 3015</h1>
+    </div>
+</footer>
 
 <script src="dist/js/jquery.min.js"></script>
 <script src="dist/js/bootstrap.min.js"></script>
