@@ -5,10 +5,12 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjQxJs-DmYxuvtF8h6GRNT87bBM7YSHEg"></script>
     <link href="https://fonts.googleapis.com/css?family=Cuprum|Ubuntu" rel="stylesheet">
     <link rel="shortcut icon" href="dist/img/favicon.png" type="image/png">
     <link rel="stylesheet" href="dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="dist/css/fontello.css">
+    <link rel="stylesheet" href="dist/css/font-awesome.min.css">
     <link rel="stylesheet" href="dist/css/main.css">
     <title>Bukovel</title>
 </head>
@@ -16,7 +18,10 @@
 
 <header class="header" style="background-image: url('dist/img/bukovel_priroda.jpg');">
     <img class="header__logo" src="dist/img/logo.png"/>
-    <h1 class="header__telNumber">	+38 (044) 362 3015</h1>
+    <ul class="header__telNumbers telNumbersList">
+        <li><h1 class="telNumbersList__header">+38 (097) 09 222 90</h1></li>
+        <li><h1 class="telNumbersList__header">+38 (093) 402 21 01</h1></li>
+    </ul>
     <div class="header__textBlock">
         <h1 class="header__smallHeader">индивидуальные туры</h1>
         <h1 class="header__mainHeader">в буковель</h1>
@@ -104,19 +109,19 @@
         <div class="bestTours__item bestTourItem">
             <img src="dist/img/bestTour1.jpg" alt="" class="bestTourItem__image">
             <h1 class="bestTourItem__mainHeader">БУКОВЕЛЬ - 3 ДНЯ</h1>
-            <p class="bestTourItem__par">Lorem ipsum dolor sit amet, <br> consectetur adipisicing.</p>
+            <p class="bestTourItem__par">3 дня катания и неимоверного удовольствия</p>
             <a target="_blank" href="http://sbmtour.com.ua/tours/bukovel-3-dnya/" class="bestTourItem__pickupTourButton button">Выбрать тур</a>
         </div>
         <div class="bestTours__item bestTourItem">
             <img src="dist/img/bestTour2.jpg" alt="" class="bestTourItem__image">
             <h1 class="bestTourItem__mainHeader">БУДНИ НА БУКОВЕЛИ И ДРАГОБРАТЕ</h1>
-            <p class="bestTourItem__par">Lorem ipsum dolor sit amet, <br> consectetur adipisicing.</p>
+            <p class="bestTourItem__par">Ски-пассы со скидками до 40% и утренний "вельвет" Вас ждут</p>
             <a target="_blank" href="http://sbmtour.com.ua/tours/bukovel-i-dragobrat-4-dnya-kataniya/" class="bestTourItem__pickupTourButton button">Выбрать тур</a>
         </div>
         <div class="bestTours__item bestTourItem">
             <img src="dist/img/bestTour3.jpg" alt="" class="bestTourItem__image">
             <h1 class="bestTourItem__mainHeader">ВЫХОДНЫЕ НА БУКОВЕЛИ И ДРАГОБРАТЕ</h1>
-            <p class="bestTourItem__par">Lorem ipsum dolor sit amet, <br> consectetur adipisicing.</p>
+            <p class="bestTourItem__par">Два горнолыжных курорта, больше драйва и больше каталок.</p>
             <a target="_blank" href="http://sbmtour.com.ua/tours/vyhodnye-na-bukoveli-i-dragobrate/" class="bestTourItem__pickupTourButton button">Выбрать тур</a>
         </div>
     </div>
@@ -148,13 +153,25 @@
 </section>
 
 <footer class="footer" style="background-image: url('dist/img/footer_bg.jpg')">
+    <div id="map" class="footer__map"></div>
     <div class="footer__wrap">
         <img src="dist/img/logo.png" alt="" class="footer__logo">
         <div class="footer__addressBlock addressBlock">
             <h1 class="addressBlock__header">Наш адресс</h1>
             <p class="addressBlock__descr">Киев, ул.Старовокзальная 23, оф.309А.</p>
         </div>
-        <h1 class="footer__telNumber">+38 (044) 362 3015</h1>
+        <div class="footer__contacts contactsBlock">
+            <ul class="contactsBlock__networkIcons networkIconsList">
+                <li class="networkIconsList__item"><i class="fa fa-facebook networkIconsList__icon" aria-hidden="true"></i></li>
+                <li class="networkIconsList__item"><i class="fa fa-instagram networkIconsList__icon" aria-hidden="true"></i></li>
+                <li class="networkIconsList__item"><i class="fa fa-google-plus networkIconsList__icon" aria-hidden="true"></i></li>
+                <li class="networkIconsList__item"><i class="fa fa-youtube-play networkIconsList__icon" aria-hidden="true"></i></li>
+            </ul>
+            <ul class="contactsBlock__telNumbers telNumbersList">
+                <li><h1 class="telNumbersList__header">+38 (097) 09 222 90</h1></li>
+                <li><h1 class="telNumbersList__header">+38 (093) 402 21 01</h1></li>
+            </ul>
+        </div>
     </div>
 </footer>
 
