@@ -39,4 +39,27 @@ $(document).ready(function(){
             $(document).css('overflow','hidden');
         }
     });
+
+    var email, tel, name;
+
+
+    $("#orderTourForm").submit(function(e) { //устанавливаем событие отправки для формы с id=form
+        e.preventDefault();
+        email = $('.inputDefault__email').val();
+        tel = $('.inputDefault__tel').val();
+        name = $('.inputDefault__name').val();
+        console.log(email+ ' '+ name +' '+ tel);
+
+        var form_data = [ name, tel, email]; //собераем все данные из формы
+        console.log(form_data);
+        $.ajax({
+            type: "POST", //Метод отправки
+            url: "send.php", //путь до php фаила отправителя
+            data: form_data,
+            success: function() {
+                //код в этом блоке выполняется при успешной отправке сообщения
+                alert("Ваше сообщение отпрвлено!");
+            }
+        });
+    });
 });
