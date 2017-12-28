@@ -59,9 +59,7 @@ $(document).ready(function(){
                 tel: tel,
                 email: email,
                 tour: tour
-            },
-            function(data, status){
-                alert("Data: " + data + "\nStatus: " + status);
+            }
         });
     });
 
