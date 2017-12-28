@@ -8,7 +8,6 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjQxJs-DmYxuvtF8h6GRNT87bBM7YSHEg"></script>
     <link href="https://fonts.googleapis.com/css?family=Cuprum|Ubuntu" rel="stylesheet">
     <link rel="shortcut icon" href="dist/img/favicon.png" type="image/png">
-    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="dist/css/fontello.css">
     <link rel="stylesheet" href="dist/css/font-awesome.min.css">
     <link rel="stylesheet" href="dist/css/main.css">
@@ -26,8 +25,10 @@
         <h1 class="header__smallHeader">индивидуальные туры</h1>
         <h1 class="header__mainHeader">в буковель</h1>
         <ul class="header__advantagesList">
-            <li>Lorem ipsum dolor sit amet.</li>
-            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Утренний "вельвет"</li>
+            <li>Ски-пассы с утренней скидкой</li>
+            <li>Уютные коттеджи для размещения</li>
+            <li>Лучшие блюда домашней кухни</li>
         </ul>
         <a href="#orderTourForm" class="header__pickupTourButton button pickupTourButton">Подобрать тур</a>
     </div>
@@ -47,11 +48,11 @@
             <h1 class="orderTourForm__mainHeader">ЗАПОЛНИТЕ ФОРМУ</h1>
             <h2 class="orderTourForm__smallHeader">на подбор индивидуального <br>
                 тура в Буковель</h2>
-            <input class="orderTourForm__input inputDefault inputDefault__name" type="text" placeholder="Ваше имя*" required="required">
-            <input class="orderTourForm__input inputDefault inputDefault__tel" type="text" placeholder="Ваше телефон*" required="required">
-            <input class="orderTourForm__input inputDefault inputDefault__email email" type="email" placeholder="Ваш e-mail*" required="required">
+            <input class="orderTourForm__input inputDefault inputDefault__name" type="text" placeholder="Ваше имя*" required="required" pattern="[а-яА-ЯёЁЇїІіЄєҐґ]{1,20}$">
+            <input class="orderTourForm__input inputDefault inputDefault__tel" type="tel" placeholder="Ваш телефон*" title='Формат ввода (050) 121-34-57' required="required" pattern="\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}$">
+            <input class="orderTourForm__input inputDefault inputDefault__email email" type="email" placeholder="Ваш e-mail*" required="required" >
             <div class="select  inputDefault orderTourForm__select">
-                <span class="select__placeholder"><h2>Выберите тур</h2></span>
+                <span class="select__placeholder"><h2>Выберите тур*</h2></span>
                 <ul>
                     <li><h2>БУКОВЕЛЬ - 3 ДНЯ</h2></li>
                     <li><h2>БУДНИ НА БУКОВЕЛИ И ДРАГОБРАТЕ</h2></li>
@@ -176,8 +177,6 @@
 </footer>
 
 <script src="dist/js/jquery.min.js"></script>
-<script src="dist/js/bootstrap.min.js"></script>
-
 <script src="dist/js/main.js"></script>
 
 </body>

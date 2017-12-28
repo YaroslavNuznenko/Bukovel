@@ -40,28 +40,30 @@ $(document).ready(function(){
         }
     });
 
-    var email, tel, name;
+    var email, tel, name, tour;
 
 
-    // $("#orderTourForm").submit(function(e) { //устанавливаем событие отправки для формы с id=form
-    //     e.preventDefault();
-    //     email = $('.inputDefault__email').val();
-    //     tel = $('.inputDefault__tel').val();
-    //     name = $('.inputDefault__name').val();
-    //     console.log(email+ ' '+ name +' '+ tel);
-    //
-    //     var form_data = [ name, tel, email]; //собераем все данные из формы
-    //     console.log(form_data);
-    //     $.ajax({
-    //         type: "POST", //Метод отправки
-    //         url: "send.php", //путь до php фаила отправителя
-    //         data: form_data,
-    //         success: function() {
-    //             //код в этом блоке выполняется при успешной отправке сообщения
-    //             alert("Ваше сообщение отпрвлено!");
-    //         }
-    //     });
-    // });
+    $("#orderTourForm").submit(function(e) { //устанавливаем событие отправки для формы с id=form
+        e.preventDefault();
+        email = $('.inputDefault__email').val();
+        tel = $('.inputDefault__tel').val();
+        name = $('.inputDefault__name').val();
+        tour = $('.orderTourForm__select .select__placeholder h2').text();
+        if(tour === 'Выберите тур'){
+            alert('Вы забыли выбрать тур!')
+            return;
+        }
+        $.post('send.php',
+            {
+                name: name,
+                tel: tel,
+                email: email,
+                tour: tour
+            },
+            function(data, status){
+                alert("Data: " + data + "\nStatus: " + status);
+        });
+    });
 
     function initMap() {
         var uluru ={lat: 50.443662, lng:  30.489804};
