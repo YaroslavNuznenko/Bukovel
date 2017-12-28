@@ -59,8 +59,7 @@ $(document).ready(function(){
                 tel: tel,
                 email: email,
                 tour: tour
-            }
-        });
+            });
     });
 
     function initMap() {

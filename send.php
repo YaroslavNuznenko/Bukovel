@@ -1,6 +1,6 @@
 <?php
 if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['tel'])&&$_POST['tel']!="")&&(isset($_POST['email'])&&$_POST['email']!="")&&(isset($_POST['tour'])&&$_POST['tour']!="")){ 
-        $to = 'svitbezmezh@ukr.net'; 
+        $to = 'nuznenko@gmail.com'; 
         $subject = 'Заявки в Буковель'; 
         $message = '
                 <html>
